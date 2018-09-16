@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+<parameter name ="Suite level param" value ="This is suite level param"></parameter>
+  <test name="TestOne">
+    <classes>
+        <class name="Testn.ParameterizedTestng">
+        <methods>
+        <include name = "Test1" ></include>
+        </methods>
+        </class>           
+    </classes>
+  </test>
+  
+  <test name = "Testtwo">
+  <parameter name ="Test level param" value ="This is Test level param"></parameter><classes>
+        <class name="Testn.ParameterizedTestng">
+        <methods>
+        <include name = "Test2" ></include>
+        </methods>
+        </class>           
+    </classes>
+  </test> 
+  
+ <parameter name ="Suite level param" value ="This is suite level param for Test3">
+ </parameter>
+  <test name = "Testthree">
+  <parameter name ="Test level param" value ="This is Test level param for Test3"></parameter><classes>
+        <class name="Testn.ParameterizedTestng">
+        <methods>
+        <include name = "Test3" ></include>
+        </methods>
+        </class>           
+    </classes>
+  </test> 
+  
+  <parameter name ="Suite level param" value ="This is suite level param for Test3"></parameter>
+  <test name = "Testfour">
+  <parameter name ="Suite level param" value ="This is suite level param for Test3 which overrided"></parameter>
+  <parameter name ="Test level param" value ="This is Test level param for Test3"></parameter><classes>
+        <class name="Testn.ParameterizedTestng">
+        <methods>
+        <include name = "Test3" ></include>
+        </methods>
+        </class>           
+    </classes>
+  </test> 
+  
+  
+</suite>

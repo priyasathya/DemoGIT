@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+  <test name="TestOne">
+    <classes>
+        <class name="Testn.BeforeAndAfterClass">
+            <methods>
+            <include name="firstGroupMethodOne"/>
+            <exclude name="firstGroupMethodTwo"/>
+            </methods>
+        </class>           
+    </classes>
+  </test>
+  
+</suite>
