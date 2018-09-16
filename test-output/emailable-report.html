@@ -32,13 +32,55 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
 <tr><td style="text-align:left;padding-right:2em">TestOne</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Testtwo</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Testthree</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Testfour</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.2 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">TestOne &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">Testn.Testclass</td><td><a href="#m1"><b>Test1</b>  </a></td><td class="numi">1</td><td>1536398703942</td><td class="numi">7</td></tr>
+<tr class="passedodd"><td rowspan="1">Testn.ParameterizedTestng</td><td><a href="#m1"><b>Test1</b>  </a></td><td class="numi">1</td><td>1537075673415</td><td class="numi">20</td></tr>
+<tr><th colspan="4">Testtwo &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">Testn.ParameterizedTestng</td><td><a href="#m2"><b>Test2</b>  </a></td><td class="numi">1</td><td>1537075673491</td><td class="numi">2</td></tr>
+<tr><th colspan="4">Testthree &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">Testn.ParameterizedTestng</td><td><a href="#m3"><b>Test3</b>  </a></td><td class="numi">1</td><td>1537075673529</td><td class="numi">2</td></tr>
+<tr><th colspan="4">Testfour &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">Testn.ParameterizedTestng</td><td><a href="#m4"><b>Test3</b>  </a></td><td class="numi">1</td><td>1537075673556</td><td class="numi">2</td></tr>
 </table>
 <h1>TestOne</h1>
-<h2 id="m1">Testn.Testclass:Test1</h2>
+<h2 id="m1">Testn.ParameterizedTestng:Test1</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>This is suite level param for Test3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testtwo</h1>
+<h2 id="m2">Testn.ParameterizedTestng:Test2</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>This is Test level param</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testthree</h1>
+<h2 id="m3">Testn.ParameterizedTestng:Test3</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>This is suite level param for Test3</td>
+<td>This is Test level param for Test3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Testfour</h1>
+<h2 id="m4">Testn.ParameterizedTestng:Test3</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>This is suite level param for Test3 which overrided</td>
+<td>This is Test level param for Test3</td>
+</tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

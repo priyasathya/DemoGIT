@@ -48,12 +48,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\sslindia\workspace\Testngg\testng2.xml</span>
+                    <span>C:\Users\sslindia\workspace\Testngg\testng3.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testn.Testclass" hash-for-method="Test1">Test1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testn.ParameterizedTestng" hash-for-method="Test1(This is suite level param for Test3)">Test1(This is suite level param for Test3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testn.ParameterizedTestng" hash-for-method="Test2(This is Test level param)">Test2(This is Test level param)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testn.ParameterizedTestng" hash-for-method="Test3(This is suite level param for Test3, This is Test level param for Test3)">Test3(This is suite level param for Test3, This is Test level param for Test3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testn.ParameterizedTestng" hash-for-method="Test3(This is suite level param for Test3 which overrided, This is Test level param for Test3)">Test3(This is suite level param for Test3 which overrided, This is Test level param for Test3)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -119,14 +134,39 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Testn.Testclass</span>
+              <span class="class-name">Testn.ParameterizedTestng</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test1">
-                  </a> <!-- Test1 -->
+                  <a name="Test1(This is suite level param for Test3)">
+                  </a> <!-- Test1(This is suite level param for Test3) -->
                   <span class="method-name">Test1</span>
+                  <span class="parameters">(This is suite level param for Test3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test2(This is Test level param)">
+                  </a> <!-- Test2(This is Test level param) -->
+                  <span class="method-name">Test2</span>
+                  <span class="parameters">(This is Test level param)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test3(This is suite level param for Test3, This is Test level param for Test3)">
+                  </a> <!-- Test3(This is suite level param for Test3, This is Test level param for Test3) -->
+                  <span class="method-name">Test3</span>
+                  <span class="parameters">(This is suite level param for Test3, This is Test level param for Test3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test3(This is suite level param for Test3 which overrided, This is Test level param for Test3)">
+                  </a> <!-- Test3(This is suite level param for Test3 which overrided, This is Test level param for Test3) -->
+                  <span class="method-name">Test3</span>
+                  <span class="parameters">(This is suite level param for Test3 which overrided, This is Test level param for Test3)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,18 +174,54 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sslindia\workspace\Testngg\testng2.xml</span>
+            <span class="header-content">C:\Users\sslindia\workspace\Testngg\testng3.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;Suite level param&quot; value=&quot;This is suite level param for Test3&quot;/&gt;
   &lt;test name=&quot;TestOne&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Testn.Testclass&quot;/&gt;
+      &lt;class name=&quot;Testn.ParameterizedTestng&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Test1&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Testn.ParameterizedTestng --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestOne --&gt;
+  &lt;test name=&quot;Testtwo&quot;&gt;
+    &lt;parameter name=&quot;Test level param&quot; value=&quot;This is Test level param&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Testn.ParameterizedTestng&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Test2&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Testn.ParameterizedTestng --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Testtwo --&gt;
+  &lt;test name=&quot;Testthree&quot;&gt;
+    &lt;parameter name=&quot;Test level param&quot; value=&quot;This is Test level param for Test3&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Testn.ParameterizedTestng&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Test3&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Testn.ParameterizedTestng --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Testthree --&gt;
+  &lt;test name=&quot;Testfour&quot;&gt;
+    &lt;parameter name=&quot;Suite level param&quot; value=&quot;This is suite level param for Test3 which overrided&quot;/&gt;
+    &lt;parameter name=&quot;Test level param&quot; value=&quot;This is Test level param for Test3&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Testn.ParameterizedTestng&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Test3&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Testn.ParameterizedTestng --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Testfour --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,6 +234,15 @@
             <ul>
               <li>
                 <span class="test-name">TestOne (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Testtwo (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Testthree (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Testfour (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,16 +268,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test1')
-data.setCell(0, 2, 'Testn.Testclass')
-data.setCell(0, 3, 7);
+data.setCell(0, 2, 'Testn.ParameterizedTestng')
+data.setCell(0, 3, 20);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Test2')
+data.setCell(1, 2, 'Testn.ParameterizedTestng')
+data.setCell(1, 3, 2);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Test3')
+data.setCell(2, 2, 'Testn.ParameterizedTestng')
+data.setCell(2, 3, 2);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Test3')
+data.setCell(3, 2, 'Testn.ParameterizedTestng')
+data.setCell(3, 3, 2);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 ms</span>
+              <span class="suite-total-time">Total running time: 26 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -207,9 +304,30 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Testn.ParameterizedTestng</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Test2</span>
+                <br/>
+                <span class="ignored-method-name">Test2</span>
+                <br/>
+                <span class="ignored-method-name">Test2</span>
+                <br/>
+                <span class="ignored-method-name">Test3</span>
+                <br/>
+                <span class="ignored-method-name">Test3</span>
+                <br/>
+                <span class="ignored-method-name">Test1</span>
+                <br/>
+                <span class="ignored-method-name">Test1</span>
+                <br/>
+                <span class="ignored-method-name">Test1</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -218,43 +336,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Testn.Testclass</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">16 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">22 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">Testn.ParameterizedTestng</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">Test1</span>
-                <span class="method-start">24 ms</span>
+                <span class="method-name">Test1(This is suite level param for Test3)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">24 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">33 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">33 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">35 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">168 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="test-method">
+                <span class="method-name">Test2(This is Test level param)</span>
+                <span class="method-start">76 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test3(This is suite level param for Test3, This is Test level param for Test3)</span>
+                <span class="method-start">114 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test3(This is suite level param for Test3 which overrided, This is Test level param for Test3)</span>
+                <span class="method-start">141 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
